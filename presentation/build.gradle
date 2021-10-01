@@ -87,6 +87,9 @@ dependencies {
     androidTestImplementation  'com.google.dagger:hilt-android-testing:2.31-alpha'
     kaptAndroidTest 'com.google.dagger:hilt-android-compiler:2.31-alpha'
 
+    // Coroutine
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
+
     // For local unit tests
     testImplementation 'com.google.dagger:hilt-android-testing:2.31-alpha'
     kaptTest 'com.google.dagger:hilt-android-compiler:2.31-alpha'
@@ -114,6 +117,5 @@ dependencies {
 
     implementation project(':data')
     implementation project(':domain')
-
 
 }
