@@ -105,6 +105,8 @@ dependencies {
     //Flexbox For UI
     implementation 'com.google.android.flexbox:flexbox:3.0.0'
 
+    kapt "androidx.databinding:databinding-compiler:7.0.2"
+
     implementation project(':data')
     implementation project(':domain')
 
