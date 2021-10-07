@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -80,19 +81,11 @@ dependencies {
     kapt "com.github.bumptech.glide:compiler:4.12.0"
 
     // Dagger Hilt
-    implementation 'com.google.dagger:hilt-android:2.31-alpha'
-    kapt 'com.google.dagger:hilt-android-compiler:2.31-alpha'
-
-    // For instrumentation tests
-    androidTestImplementation  'com.google.dagger:hilt-android-testing:2.31-alpha'
-    kaptAndroidTest 'com.google.dagger:hilt-android-compiler:2.31-alpha'
+    implementation 'com.google.dagger:hilt-android:2.37'
+    kapt 'com.google.dagger:hilt-android-compiler:2.37'
 
     // Coroutine
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
-
-    // For local unit tests
-    testImplementation 'com.google.dagger:hilt-android-testing:2.31-alpha'
-    kaptTest 'com.google.dagger:hilt-android-compiler:2.31-alpha'
 
     //ktx
     implementation 'androidx.activity:activity-ktx:1.3.1'
@@ -111,9 +104,6 @@ dependencies {
 
     //Flexbox For UI
     implementation 'com.google.android.flexbox:flexbox:3.0.0'
-
-    implementation project(path: ':domain')
-    implementation project(path: ':data')
 
     implementation project(':data')
     implementation project(':domain')
