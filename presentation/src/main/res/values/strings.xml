@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">DSB-Android</string>
-    <string name="hint_id">아이디를 입력하세요</string>
-    <string name="hint_pw">패스워드를 입력하세요.</string>
+    <string name="hint_id">ID</string>
+    <string name="hint_pw">Password</string>
     <string name="text_no_id">아이디가 없으신가요?</string>
     <string name="text_register">회원가입하기</string>
 </resources>
