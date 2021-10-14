@@ -4,4 +4,5 @@
     <string name="hint_pw">Password</string>
     <string name="text_no_id">아이디가 없으신가요?</string>
     <string name="text_register">회원가입하기</string>
+    <string name="text_valid_pw_check">특수문자 포함 8 ~ 16자로 작성해주세요.</string>
 </resources>
