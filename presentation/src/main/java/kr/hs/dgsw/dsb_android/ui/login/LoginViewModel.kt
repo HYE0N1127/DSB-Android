@@ -9,10 +9,16 @@ import kr.hs.dgsw.dsb_android.util.SingleLiveEvent
 
 class LoginViewModel : BaseViewModel() {
     val onRegisterClickEvent = SingleLiveEvent<Unit>()
+    val onLoginClickEvent = SingleLiveEvent<Unit>()
+
     val id = MutableLiveData<EditText>()
     val pw = MutableLiveData<EditText>()
 
     fun onClickRegister() {
         onRegisterClickEvent.call()
+    }
+
+    fun onClickLogin() {
+        onLoginClickEvent.call()
     }
 }
