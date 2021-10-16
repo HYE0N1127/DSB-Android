@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/hhb04/Desktop/Devs/SoloProject/DSB-Android/presentation/src/main/res/drawable/agree_checkbox.xml" value="0.3509259259259259" />
         <entry key="..\:/Users/hhb04/Desktop/Devs/SoloProject/DSB-Android/presentation/src/main/res/drawable/custon_check_box.xml" value="0.3675925925925926" />
+        <entry key="..\:/Users/hhb04/Desktop/Devs/SoloProject/DSB-Android/presentation/src/main/res/layout/activity_first_register.xml" value="0.35520833333333335" />
         <entry key="..\:/Users/hhb04/Desktop/Devs/SoloProject/DSB-Android/presentation/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/hhb04/Desktop/Devs/SoloProject/DSB-Android/presentation/src/main/res/layout/activity_main.xml" value="0.19270833333333334" />
         <entry key="..\:/Users/hhb04/Desktop/Devs/SoloProject/DSB-Android/presentation/src/main/res/layout/activity_register.xml" value="0.33" />

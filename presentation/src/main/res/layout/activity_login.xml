@@ -66,8 +66,9 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <Button
                 android:id="@+id/btn_login"
+                android:onClick="@{() -> vm.onClickLogin()}"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginHorizontal="20dp"
@@ -76,6 +77,7 @@
                 android:fontFamily="@font/gmarket_sans_medium"
                 android:includeFontPadding="false"
                 android:text="로그인"
+                android:gravity="center"
                 android:textColor="@color/white"
                 app:layout_constraintTop_toBottomOf="@+id/login_edittext_layout"
                 tools:layout_editor_absoluteX="20dp" />
