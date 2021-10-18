@@ -1,12 +1,10 @@
-package kr.hs.dgsw.dsb_android.ui.register.detail
+package kr.hs.dgsw.dsb_android.view.activity
 
 import android.content.Intent
-import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.core.widget.addTextChangedListener
 import kr.hs.dgsw.dsb_android.base.BaseActivity
 import kr.hs.dgsw.dsb_android.databinding.ActivityRegisterBinding
-import kr.hs.dgsw.dsb_android.ui.login.LoginActivity
+import kr.hs.dgsw.dsb_android.viewmodel.RegisterViewModel
 
 class RegisterActivity : BaseActivity<ActivityRegisterBinding, RegisterViewModel>() {
     override val viewModel: RegisterViewModel by viewModels()

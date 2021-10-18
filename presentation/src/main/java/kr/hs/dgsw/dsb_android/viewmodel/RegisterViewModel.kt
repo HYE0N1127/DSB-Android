@@ -1,4 +1,4 @@
-package kr.hs.dgsw.dsb_android.ui.register.detail
+package kr.hs.dgsw.dsb_android.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import kr.hs.dgsw.dsb_android.base.BaseViewModel
