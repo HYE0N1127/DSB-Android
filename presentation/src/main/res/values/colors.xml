@@ -8,5 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="color_primary">#5C9DFF</color>
+
+<!--    Font Color      -->
     <color name="color_light_black">#333333</color>
+
+<!--    Theme Color     -->
+    <color name="colorCardBackground">@color/white</color>
 </resources>

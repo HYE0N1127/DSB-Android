@@ -1,9 +1,12 @@
 <resources>
     <string name="app_name">DSB-Android</string>
+    <string name="prettier_app_name">DGSW Bank</string>
     <string name="hint_id">ID</string>
     <string name="hint_pw">Password</string>
     <string name="text_no_id">아이디가 없으신가요?</string>
     <string name="text_register">회원가입하기</string>
     <string name="text_valid_pw_check">특수문자 포함 8 ~ 16자로 작성해주세요.</string>
     <string name="input_easy_pw">간편비밀번호를 입력해주세요</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
