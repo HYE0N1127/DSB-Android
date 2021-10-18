@@ -1,12 +1,11 @@
-package kr.hs.dgsw.dsb_android.ui.login
+package kr.hs.dgsw.dsb_android.view.activity
 
 import android.content.Intent
 import androidx.activity.viewModels
 import dagger.hilt.android.AndroidEntryPoint
-import kr.hs.dgsw.dsb_android.ui.register.detail.RegisterActivity
 import kr.hs.dgsw.dsb_android.base.BaseActivity
 import kr.hs.dgsw.dsb_android.databinding.ActivityLoginBinding
-import kr.hs.dgsw.dsb_android.ui.main.MainActivity
+import kr.hs.dgsw.dsb_android.viewmodel.LoginViewModel
 
 @AndroidEntryPoint
 class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(){

@@ -1,4 +1,4 @@
-package kr.hs.dgsw.dsb_android.ui.login
+package kr.hs.dgsw.dsb_android.viewmodel
 
 import android.widget.EditText
 import androidx.lifecycle.MutableLiveData

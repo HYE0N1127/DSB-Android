@@ -6,14 +6,14 @@
     <data>
         <variable
             name="vm"
-            type="kr.hs.dgsw.dsb_android.ui.main.MainViewModel" />
+            type="kr.hs.dgsw.dsb_android.viewmodel.MainViewModel" />
     </data>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.main.MainActivity">
+        tools:context=".view.activity.MainActivity">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/appbar_main"

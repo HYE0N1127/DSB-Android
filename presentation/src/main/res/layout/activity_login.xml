@@ -7,7 +7,7 @@
 
         <variable
             name="vm"
-            type="kr.hs.dgsw.dsb_android.ui.login.LoginViewModel" />
+            type="kr.hs.dgsw.dsb_android.viewmodel.LoginViewModel" />
 
     </data>
 
@@ -18,7 +18,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".ui.login.LoginActivity">
+            tools:context=".view.activity.LoginActivity">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/login_edittext_layout"

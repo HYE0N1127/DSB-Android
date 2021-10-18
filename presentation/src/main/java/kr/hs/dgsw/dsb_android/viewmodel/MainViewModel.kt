@@ -1,4 +1,4 @@
-package kr.hs.dgsw.dsb_android.ui.main
+package kr.hs.dgsw.dsb_android.viewmodel
 
 import kr.hs.dgsw.dsb_android.base.BaseViewModel
 
