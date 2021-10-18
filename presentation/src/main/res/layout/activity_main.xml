@@ -4,19 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="vm"
+            type="kr.hs.dgsw.dsb_android.ui.main.MainViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.main.MainActivity">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/appbar_main"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="@color/colorCardBackground"
-            app:layout_constraintTop_toTopOf="parent">
+            android:background="@color/colorCardBackground">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -45,15 +48,22 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_layout"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph" />
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/nav_bottom"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@color/colorCardBackground"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:labelVisibilityMode="selected"
             app:menu="@menu/menu_bottom_nav" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </layout>

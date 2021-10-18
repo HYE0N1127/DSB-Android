@@ -2,4 +2,5 @@
 <resources>
     <color name="colorCardBackground">#202020</color>
     <color name="color_light_black">#333333</color>
+    <color name="colorBackground">#FFFFFF</color>
 </resources>

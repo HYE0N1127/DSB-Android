@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
 
+    <fragment
+        android:id="@+id/home"
+        android:name="kr.hs.dgsw.dsb_android.HomeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/remittance"
+        android:name="kr.hs.dgsw.dsb_android.RemittanceFragment"
+        android:label="RemittanceFragment"
+        tools:layout="@layout/fragment_remittance" />
+
+    <fragment
+        android:id="@+id/profile"
+        android:name="kr.hs.dgsw.dsb_android.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

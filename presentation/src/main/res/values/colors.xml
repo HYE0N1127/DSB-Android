@@ -14,4 +14,5 @@
 
 <!--    Theme Color     -->
     <color name="colorCardBackground">@color/white</color>
+    <color name="colorBackground">#FFFFFF</color>
 </resources>
