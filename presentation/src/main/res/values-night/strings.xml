@@ -2,4 +2,5 @@
 <resources>
     <string name="text_no_id">아이디가 없으신가요?</string>
     <string name="input_easy_pw">간편비밀번호를 입력해주세요</string>
+    <string name="text_remittance">송금</string>
 </resources>

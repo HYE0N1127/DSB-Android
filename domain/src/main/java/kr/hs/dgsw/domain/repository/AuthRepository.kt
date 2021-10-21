@@ -9,4 +9,5 @@ interface AuthRepository {
     fun login(id: String, pw: String) : Completable
 
     fun simpleLogin(simplePw : String) : Completable
+
 }
