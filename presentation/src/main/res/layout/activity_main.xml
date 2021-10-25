@@ -19,6 +19,7 @@
             android:id="@+id/appbar_main"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:elevation="0dp"
             android:background="@color/colorCardBackground">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,12 +39,6 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#D2D2D2"
-                    app:layout_constraintBottom_toBottomOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>

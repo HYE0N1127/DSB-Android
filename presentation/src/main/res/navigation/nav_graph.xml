@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="kr.hs.dgsw.dsb_android.HomeFragment"
+        android:name="kr.hs.dgsw.dsb_android.view.fragment.HomeFragment"
         android:label=""
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/remittance"
-        android:name="kr.hs.dgsw.dsb_android.RemittanceFragment"
+        android:name="kr.hs.dgsw.dsb_android.view.fragment.RemittanceFragment"
         android:label="RemittanceFragment"
         tools:layout="@layout/fragment_remittance" />
 
     <fragment
         android:id="@+id/profile"
-        android:name="kr.hs.dgsw.dsb_android.ProfileFragment"
+        android:name="kr.hs.dgsw.dsb_android.view.fragment.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile" />
 </navigation>

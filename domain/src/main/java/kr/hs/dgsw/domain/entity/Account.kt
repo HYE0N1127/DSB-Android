@@ -1,4 +1,4 @@
-package kr.hs.dgsw.domain.model
+package kr.hs.dgsw.domain.entity
 
 data class Account(
     val accountName : String,       // 계좌 이름

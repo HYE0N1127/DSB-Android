@@ -1,6 +1,5 @@
 package kr.hs.dgsw.dsb_android.view.fragment
 
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import kr.hs.dgsw.dsb_android.base.BaseFragment
 import kr.hs.dgsw.dsb_android.databinding.FragmentHomeBinding
@@ -10,7 +9,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
     override val viewModel: HomeViewModel by viewModels()
 
     override fun observerViewModel() {
-        TODO("Not yet implemented")
-    }
+        with(mViewModel) {
+            mBinding.homeRefreshLayout.setOnRefreshListener {
 
+            }
+        }
+    }
 }
