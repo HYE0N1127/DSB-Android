@@ -8,6 +8,8 @@ import kr.hs.dgsw.dsb_android.navigator.AccountNavigator
 import kr.hs.dgsw.dsb_android.util.SingleLiveEvent
 
 class AccountItemViewModel : BaseItemViewModel<AccountNavigator>() {
+    lateinit var account : Account
+
     val onRemittanceEvent = SingleLiveEvent<Int>()
 
     val accountName = MutableLiveData<String>()
@@ -15,13 +17,15 @@ class AccountItemViewModel : BaseItemViewModel<AccountNavigator>() {
     val accountProfileImage = MutableLiveData<String>()
 
     fun bind(account: Account) {
+        this.account = account
+
         accountName.value = account.accountName
         balance.value = account.balance
         accountProfileImage.value = account.accountProfileImage
     }
 
     fun onClickRemittance() {
-
+        onRemittanceEvent.value = account.idx
     }
 
 }
