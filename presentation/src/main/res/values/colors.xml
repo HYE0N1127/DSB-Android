@@ -15,4 +15,5 @@
 <!--    Theme Color     -->
     <color name="colorCardBackground">@color/white</color>
     <color name="colorBackground">#FFFFFF</color>
+    <color name="color_background">#EDEDED</color>
 </resources>
