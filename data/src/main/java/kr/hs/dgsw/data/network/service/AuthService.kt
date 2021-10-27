@@ -1,12 +1,10 @@
 package kr.hs.dgsw.data.network.service
 
-import io.reactivex.Completable
 import io.reactivex.Single
 import kr.hs.dgsw.data.network.request.LoginRequest
 import kr.hs.dgsw.data.network.request.RegisterRequest
-import kr.hs.dgsw.data.network.response.LoginResponse
+import kr.hs.dgsw.data.network.response.data.LoginData
 import retrofit2.Response
-import retrofit2.Retrofit
 import retrofit2.http.Body
 import retrofit2.http.POST
 
@@ -15,7 +13,7 @@ interface AuthService {
     @POST("/auth/signin")
     fun login(
         @Body loginRequest: LoginRequest
-    ): Single<retrofit2.Response<Response<LoginResponse>>>
+    ): Single<retrofit2.Response<Response<LoginData>>>
 
     @POST("auth/signup")
     fun register(
