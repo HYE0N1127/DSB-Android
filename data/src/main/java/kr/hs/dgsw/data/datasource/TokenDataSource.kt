@@ -6,9 +6,9 @@ import kr.hs.dgsw.domain.entity.Token
 import javax.inject.Inject
 
 class TokenDataSource @Inject constructor(
-    override val remote: Unit,
+    override val remote: Any,
     override val cache: TokenCache
-): BaseDataSource<Unit, TokenCache>() {
+): BaseDataSource<Any, TokenCache>() {
 
     fun getToken() = cache.getToken()
 
