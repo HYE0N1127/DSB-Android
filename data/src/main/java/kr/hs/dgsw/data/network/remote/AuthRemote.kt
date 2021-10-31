@@ -4,8 +4,9 @@ import kr.hs.dgsw.data.base.BaseRemote
 import kr.hs.dgsw.data.network.request.LoginRequest
 import kr.hs.dgsw.data.network.request.RegisterRequest
 import kr.hs.dgsw.data.network.service.AuthService
+import javax.inject.Inject
 
-class AuthRemote(override val service: AuthService) : BaseRemote<AuthService>() {
+class AuthRemote @Inject constructor(override val service: AuthService) : BaseRemote<AuthService>() {
 
     fun login(loginRequest: LoginRequest) =
         service.login(loginRequest).map(getResponseData())

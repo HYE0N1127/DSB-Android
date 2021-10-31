@@ -10,6 +10,7 @@ import javax.inject.Inject
 class TokenRepositoryImpl @Inject constructor(
     private val tokenDataSource: TokenDataSource
 ) : TokenRepository {
+
     override fun getToken(): Single<Token> {
         return tokenDataSource.getToken()
     }

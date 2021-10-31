@@ -3,6 +3,7 @@ package kr.hs.dgsw.dsb_android.module
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.scopes.ViewModelScoped
 import dagger.hilt.components.SingletonComponent
 import kr.hs.dgsw.data.database.TokenCache
 import kr.hs.dgsw.data.datasource.AuthDataSource
