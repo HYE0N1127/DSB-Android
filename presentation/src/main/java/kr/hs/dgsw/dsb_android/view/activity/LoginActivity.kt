@@ -17,7 +17,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(){
                 val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
                 startActivity(intent)
             })
-            onLoginClickEvent.observe(this@LoginActivity, {
+            loginSuccessEvent.observe(this@LoginActivity, {
                 val intent = Intent(this@LoginActivity, MainActivity::class.java)
                 startActivity(intent)
                 finish()

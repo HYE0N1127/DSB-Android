@@ -68,7 +68,7 @@
 
             <Button
                 android:id="@+id/btn_login"
-                android:onClick="@{() -> vm.onClickLogin()}"
+                android:onClick="@{vm::login}"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginHorizontal="20dp"
