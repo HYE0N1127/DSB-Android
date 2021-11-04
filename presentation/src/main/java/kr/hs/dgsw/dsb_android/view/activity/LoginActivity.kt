@@ -5,7 +5,7 @@ import androidx.activity.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 import kr.hs.dgsw.dsb_android.base.BaseActivity
 import kr.hs.dgsw.dsb_android.databinding.ActivityLoginBinding
-import kr.hs.dgsw.dsb_android.viewmodel.LoginViewModel
+import kr.hs.dgsw.dsb_android.viewmodel.activity.LoginViewModel
 
 @AndroidEntryPoint
 class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(){
