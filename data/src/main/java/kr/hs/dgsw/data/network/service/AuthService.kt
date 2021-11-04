@@ -26,4 +26,7 @@ interface AuthService {
     @POST("/auth/signup/easy")
     fun registerSimpleLogin(): Single<retrofit2.Response<Response<Any>>>
 
+    @POST("auth/signup/check")
+    fun idDoubleValidCheck(id: String): Single<retrofit2.Response<Response<Any>>>
+
 }
