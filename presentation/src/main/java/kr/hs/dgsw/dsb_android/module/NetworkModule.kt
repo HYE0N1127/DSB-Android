@@ -1,85 +1,44 @@
 package kr.hs.dgsw.dsb_android.module
 
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import dagger.Module
-import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.components.SingletonComponent
-import kr.hs.dgsw.data.network.intercepter.TokenInterceptor
 import kr.hs.dgsw.data.utils.Constants
-import kr.hs.dgsw.domain.repository.TokenRepository
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.dsl.module
+import retrofit2.CallAdapter
+import retrofit2.Converter
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.concurrent.Executors
-import javax.inject.Qualifier
+import java.util.concurrent.TimeUnit
 
-@Module
-@InstallIn(SingletonComponent::class)
-object NetworkModule {
+val NetworkModule = module{
 
-    @Qualifier
-    @Retention(AnnotationRetention.BINARY)
-    annotation class DefaultOkHttpClient
+    val networkModule = module {
 
-    @Qualifier
-    @Retention(AnnotationRetention.BINARY)
-    annotation class NoTokenInterceptorOkHttpClient
+        single {
+            val interceptor = HttpLoggingInterceptor()
+            interceptor.level = HttpLoggingInterceptor.Level.BODY
 
-    @Provides
-    fun provideTokenInterceptor(tokenRepository: TokenRepository): TokenInterceptor {
-        return TokenInterceptor(tokenRepository)
-    }
+            OkHttpClient.Builder().addInterceptor(interceptor)
+                .readTimeout(20, TimeUnit.SECONDS)
+                .writeTimeout(20, TimeUnit.SECONDS).build()
+        }
 
-    @Provides
-    fun provideGson(): Gson {
-        return GsonBuilder().create()
-    }
+        single {
+            RxJava2CallAdapterFactory.create() as CallAdapter.Factory
+        }
 
-    @DefaultOkHttpClient
-    @Provides
-    fun provideOkHttpClient(tokenInterceptor: TokenInterceptor): OkHttpClient {
-        return OkHttpClient().newBuilder()
-            .addNetworkInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
-            .addInterceptor(tokenInterceptor)
-            .build()
-    }
+        single {
+            GsonConverterFactory.create() as Converter.Factory
+        }
 
-    @NoTokenInterceptorOkHttpClient
-    @Provides
-    fun provideNoTokenInterceptorOkHttpClient(): OkHttpClient {
-        return OkHttpClient().newBuilder()
-            .addNetworkInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
-            .build()
-    }
-
-    @RemoteModule.DefaultRetrofit
-    @Provides
-    fun provideRetrofit(gson: Gson, @DefaultOkHttpClient okHttpClient: OkHttpClient): Retrofit {
-        return Retrofit.Builder()
-            .client(okHttpClient)
-            .baseUrl(Constants.SERVER_URL)
-            .addConverterFactory(GsonConverterFactory.create(gson))
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .callbackExecutor(Executors.newSingleThreadExecutor())
-            .build()
-    }
-
-    @RemoteModule.NoTokenInterceptorRetrofit
-    @Provides
-    fun provideNoTokenInterceptorRetrofit(
-        gson: Gson,
-        @NoTokenInterceptorOkHttpClient okHttpClient: OkHttpClient
-    ): Retrofit {
-        return Retrofit.Builder()
-            .client(okHttpClient)
-            .baseUrl(Constants.SERVER_URL)
-            .addConverterFactory(GsonConverterFactory.create(gson))
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .callbackExecutor(Executors.newSingleThreadExecutor())
-            .build()
+        single {
+            Retrofit.Builder()
+                .baseUrl(Constants.SERVER_URL)
+                .client(get())
+                .addConverterFactory(get())
+                .addCallAdapterFactory(get())
+                .build()
+        }
     }
 }
