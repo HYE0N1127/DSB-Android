@@ -16,7 +16,8 @@ class DSBApplication: Application() {
                 RemoteModule,
                 RepositoryModule,
                 ServiceModule,
-                ViewModelModule
+                ViewModelModule,
+                UseCaseModule
             )
 
             modules(module)

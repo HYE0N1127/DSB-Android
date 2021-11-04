@@ -7,6 +7,6 @@ import retrofit2.Retrofit
 import retrofit2.create
 
 val RemoteModule = module {
-    single<AuthRemote> {AuthRemote(get())}
+    single<AuthRemote> { AuthRemote(get()) }
 
 }
