@@ -1,8 +1,8 @@
 package kr.hs.dgsw.data.network.service
 
 import io.reactivex.Single
-import kr.hs.dgsw.data.network.request.LoginRequest
-import kr.hs.dgsw.data.network.request.RegisterRequest
+import kr.hs.dgsw.domain.request.LoginRequest
+import kr.hs.dgsw.domain.request.RegisterRequest
 import kr.hs.dgsw.data.network.response.Response
 import kr.hs.dgsw.data.network.response.data.LoginData
 import retrofit2.http.Body
@@ -25,5 +25,8 @@ interface AuthService {
 
     @POST("/auth/signup/easy")
     fun registerSimpleLogin(): Single<retrofit2.Response<Response<Any>>>
+
+    @POST("auth/signup/check")
+    fun idDoubleValidCheck(id: String): Single<retrofit2.Response<Response<Any>>>
 
 }

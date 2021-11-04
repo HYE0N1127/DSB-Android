@@ -1,4 +1,4 @@
-package kr.hs.dgsw.data.network.request
+package kr.hs.dgsw.domain.request
 
 data class RegisterRequest(
     val id : String,

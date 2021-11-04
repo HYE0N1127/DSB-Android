@@ -7,7 +7,7 @@
 
         <variable
             name="vm"
-            type="kr.hs.dgsw.dsb_android.viewmodel.LoginViewModel" />
+            type="kr.hs.dgsw.dsb_android.viewmodel.activity.LoginViewModel" />
 
     </data>
 
@@ -36,6 +36,7 @@
                     android:layout_marginHorizontal="20dp"
                     android:backgroundTint="@color/color_primary"
                     android:fontFamily="@font/notosans_kr_medium"
+                    android:text="@={vm.id}"
                     android:hint="@string/hint_id"
                     android:importantForAutofill="no"
                     android:includeFontPadding="false"
@@ -54,6 +55,7 @@
                     android:layout_marginTop="25dp"
                     android:backgroundTint="@color/color_primary"
                     android:fontFamily="@font/notosans_kr_medium"
+                    android:text="@={vm.pw}"
                     android:hint="@string/hint_pw"
                     android:importantForAutofill="no"
                     android:includeFontPadding="false"

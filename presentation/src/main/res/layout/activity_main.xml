@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vm"
-            type="kr.hs.dgsw.dsb_android.viewmodel.MainViewModel" />
+            type="kr.hs.dgsw.dsb_android.viewmodel.activity.MainViewModel" />
     </data>
 
     <LinearLayout

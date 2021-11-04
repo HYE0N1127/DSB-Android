@@ -36,15 +36,10 @@ dependencies {
 
     implementation "io.reactivex.rxjava2:rxjava:2.2.19"
 
-    // Dagger Hilt
-    implementation 'com.google.dagger:hilt-android:2.31-alpha'
-    kapt 'com.google.dagger:hilt-android-compiler:2.31-alpha'
-
-    // For instrumentation tests
-    androidTestImplementation  'com.google.dagger:hilt-android-testing:2.31-alpha'
-    kaptAndroidTest 'com.google.dagger:hilt-android-compiler:2.31-alpha'
-
-    // For local unit tests
-    testImplementation 'com.google.dagger:hilt-android-testing:2.31-alpha'
-    kaptTest 'com.google.dagger:hilt-android-compiler:2.31-alpha'
+    // koin
+    implementation "org.koin:koin-core:2.2.0"
+    testImplementation "org.koin:koin-test:2.2.0"
+    implementation "org.koin:koin-androidx-scope:2.2.0"
+    implementation "org.koin:koin-androidx-viewmodel:2.2.0"
+    implementation "org.koin:koin-androidx-fragment:2.2.0"
 }

@@ -1,4 +1,4 @@
-package kr.hs.dgsw.dsb_android.viewmodel
+package kr.hs.dgsw.dsb_android.viewmodel.activity
 
 import androidx.lifecycle.MutableLiveData
 import kr.hs.dgsw.dsb_android.base.BaseViewModel

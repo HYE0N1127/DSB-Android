@@ -7,7 +7,7 @@ import androidx.navigation.ui.setupWithNavController
 import kr.hs.dgsw.dsb_android.R
 import kr.hs.dgsw.dsb_android.base.BaseActivity
 import kr.hs.dgsw.dsb_android.databinding.ActivityMainBinding
-import kr.hs.dgsw.dsb_android.viewmodel.MainViewModel
+import kr.hs.dgsw.dsb_android.viewmodel.activity.MainViewModel
 
 class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
     lateinit var host : NavHostFragment
