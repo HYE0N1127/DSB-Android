@@ -20,6 +20,12 @@
         <entry key="..\:/Users/hhb04/Desktop/Devs/SoloProject/DSB-Android/presentation/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2234375" />
         <entry key="..\:/Users/hhb04/Desktop/Devs/SoloProject/DSB-Android/presentation/src/main/res/xml/network_security_config.xml" value="0.1644021739130435" />
         <entry key="..\:/Users/hhb04/Desktop/Devs/SoloProject/DSB-Android_V2/presentation/src/main/res/layout/activity_login.xml" value="0.2105978260869565" />
+        <entry key="..\:/Users/hhb04/Desktop/Devs/SoloProject/DSB-Android_V2/presentation/src/main/res/layout/fragment_home.xml" value="0.2078125" />
+        <entry key="..\:/Users/hhb04/Desktop/Devs/SoloProject/DSB-Android_V2/presentation/src/main/res/layout/fragment_profile.xml" value="0.2078125" />
+        <entry key="..\:/Users/hhb04/Desktop/Devs/SoloProject/DSB-Android_V2/presentation/src/main/res/layout/fragment_remittance.xml" value="0.2078125" />
+        <entry key="..\:/Users/hhb04/Desktop/Devs/SoloProject/DSB-Android_V2/presentation/src/main/res/layout/fragment_remittance_detail.xml" value="0.2078125" />
+        <entry key="..\:/Users/hhb04/Desktop/Devs/SoloProject/DSB-Android_V2/presentation/src/main/res/layout/item_account.xml" value="0.2078125" />
+        <entry key="..\:/Users/hhb04/Desktop/Devs/SoloProject/DSB-Android_V2/presentation/src/main/res/layout/item_remittance_account.xml" value="0.2078125" />
       </map>
     </option>
   </component>
