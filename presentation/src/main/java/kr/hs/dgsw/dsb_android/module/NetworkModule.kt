@@ -13,8 +13,6 @@ import java.util.concurrent.TimeUnit
 
 val NetworkModule = module{
 
-    val networkModule = module {
-
         single {
             val interceptor = HttpLoggingInterceptor()
             interceptor.level = HttpLoggingInterceptor.Level.BODY
@@ -40,5 +38,4 @@ val NetworkModule = module{
                 .addCallAdapterFactory(get())
                 .build()
         }
-    }
 }

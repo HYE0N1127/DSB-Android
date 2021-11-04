@@ -17,7 +17,9 @@ class DSBApplication: Application() {
                 RepositoryModule,
                 ServiceModule,
                 ViewModelModule,
-                UseCaseModule
+                UseCaseModule,
+                CacheSourceModule,
+                DataSourceModule
             )
 
             modules(module)
