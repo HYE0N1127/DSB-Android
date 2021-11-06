@@ -3,4 +3,6 @@
     <color name="colorCardBackground">#202020</color>
     <color name="color_light_black">#FFFFFF</color>
     <color name="colorBackground">#FFFFFF</color>
+
+    <color name="black">#FFFFFFFF</color>
 </resources>
