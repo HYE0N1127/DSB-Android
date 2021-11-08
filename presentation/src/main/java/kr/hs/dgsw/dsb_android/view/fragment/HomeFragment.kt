@@ -13,6 +13,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
             mBinding.homeRefreshLayout.setOnRefreshListener {
 
             }
+
         }
     }
 }
