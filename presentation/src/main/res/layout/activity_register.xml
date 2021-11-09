@@ -119,28 +119,15 @@
                     <EditText
                         android:id="@+id/et_register_pw"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="10dp"
-                        android:gravity="start"
+                        android:layout_height="match_parent"
                         android:backgroundTint="@color/color_primary"
-                        android:hint="아이디를 입력해주세요"
+                        android:gravity="start"
+                        android:hint="비밀번호를 입력해주세요"
                         android:maxLines="1"
                         android:textSize="14sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/btn_pw_check_double"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <Button
-                        android:id="@+id/btn_pw_check_double"
-                        android:layout_width="110dp"
-                        android:layout_height="40dp"
-                        android:backgroundTint="@color/color_primary"
-                        android:fontFamily="@font/notosans_kr_regular"
-                        android:includeFontPadding="false"
-                        android:text="중복확인"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
