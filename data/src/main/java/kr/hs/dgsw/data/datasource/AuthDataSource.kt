@@ -24,6 +24,6 @@ class AuthDataSource(override val remote: AuthRemote, override val cache: TokenC
     fun registerSimpleLogin(easySignUpRequest: EasySignUpRequest) =
         remote.registerSimpleLogin(easySignUpRequest).flatMapCompletable { Completable.complete() }
 
-    fun idDoubleValidCheck(idDoubleValidRequest: IdDoubleValidRequest) =
-        remote.idDoubleValidCheck(idDoubleValidRequest).flatMapCompletable { Completable.complete() }
+    fun idDoubleValidCheck(id : String) =
+        remote.idDoubleValidCheck(id).flatMapCompletable { Completable.complete() }
 }

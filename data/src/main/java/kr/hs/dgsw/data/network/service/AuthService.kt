@@ -5,7 +5,9 @@ import kr.hs.dgsw.data.network.response.Response
 import kr.hs.dgsw.data.network.response.data.LoginData
 import kr.hs.dgsw.domain.request.auth.*
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Query
 
 interface AuthService {
 
@@ -14,7 +16,7 @@ interface AuthService {
         @Body loginRequest: LoginRequest,
     ): Single<retrofit2.Response<Response<LoginData>>>
 
-    @POST("auth/signup")
+    @POST("/auth/signup")
     fun register(
         @Body registerRequest: RegisterRequest,
     ): Single<retrofit2.Response<Response<Any>>>
@@ -26,7 +28,9 @@ interface AuthService {
     @POST("/auth/signup/easy")
     fun registerSimpleLogin(@Body easySignUpRequest: EasySignUpRequest): Single<retrofit2.Response<Response<Any>>>
 
-    @POST("auth/signup/check")
-    fun idDoubleValidCheck(@Body idDoubleValidRequest: IdDoubleValidRequest): Single<retrofit2.Response<Response<Any>>>
+    @GET("/auth/signup/check")
+    fun idDoubleValidCheck(
+        @Query("id") id: String
+    ): Single<retrofit2.Response<Response<Any>>>
 
 }

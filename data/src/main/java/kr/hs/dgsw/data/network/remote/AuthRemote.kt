@@ -14,8 +14,8 @@ class AuthRemote(override val service: AuthService) : BaseRemote<AuthService>() 
     fun register(registerRequest: RegisterRequest) =
         service.register(registerRequest).map(getResponseMessage())
 
-    fun idDoubleValidCheck(idDoubleValidRequest: IdDoubleValidRequest) =
-        service.idDoubleValidCheck(idDoubleValidRequest).map(getResponseMessage())
+    fun idDoubleValidCheck(id : String) =
+        service.idDoubleValidCheck(id).map(getResponseMessage())
 
     fun simpleLogin(easyLoginRequest: EasyLoginRequest) =
         service.simpleLogin(easyLoginRequest).map(getResponseData())

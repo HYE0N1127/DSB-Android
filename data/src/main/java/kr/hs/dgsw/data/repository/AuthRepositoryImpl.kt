@@ -37,6 +37,6 @@ class AuthRepositoryImpl(
         }
 
     override fun idDoubleValidCheck(id: String): Completable =
-        authDataSource.idDoubleValidCheck(IdDoubleValidRequest(id))
+        authDataSource.idDoubleValidCheck(id)
 
 }
