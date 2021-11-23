@@ -5,21 +5,24 @@ import androidx.lifecycle.MutableLiveData
 import io.reactivex.observers.DisposableCompletableObserver
 import kr.hs.dgsw.domain.request.auth.IdDoubleValidRequest
 import kr.hs.dgsw.domain.usecase.auth.IdDoubleValidUseCase
+import kr.hs.dgsw.domain.usecase.auth.RegisterUseCase
 import kr.hs.dgsw.dsb_android.base.BaseViewModel
 import kr.hs.dgsw.dsb_android.util.SingleLiveEvent
 
 class RegisterViewModel(
     private val idDoubleValidUseCase: IdDoubleValidUseCase,
+    private val registerUseCase: RegisterUseCase,
 ) : BaseViewModel() {
 
     val id = MutableLiveData<String>()
     val pw = MutableLiveData<String>()
     val name = MutableLiveData<String>()
-    val personalNumber = MutableLiveData<String>()
+    val profileImage = MutableLiveData<String>()
     val nickName = MutableLiveData<String>()
-    val email = MutableLiveData<String>()
+    val birth = MutableLiveData<String>()
     val phoneNumber = MutableLiveData<String>()
 
+    val registerSuccessEvent = SingleLiveEvent<Unit>()
     val idDoubleValidEvent = MutableLiveData(false)
     val emptyEvent = MutableLiveData(true)
     val registerEvent = SingleLiveEvent<Unit>()
@@ -39,7 +42,7 @@ class RegisterViewModel(
         picProfileImageEvent.call()
     }
 
-    fun onClickIdAvailable(view: View) {
+    fun idAvailable() {
         addDisposable(idDoubleValidUseCase.buildUseCaseObservable(IdDoubleValidUseCase.Params(id.value!!)),
             object : DisposableCompletableObserver() {
                 override fun onComplete() {
@@ -47,9 +50,32 @@ class RegisterViewModel(
                 }
 
                 override fun onError(e: Throwable) {
-                    idDoubleValidEvent.value = false
+                    onErrorEvent.value = e
                 }
 
             })
     }
+
+    fun register(view: View?) {
+        addDisposable(registerUseCase.buildUseCaseObservable(RegisterUseCase.Params(
+            id.value!!,
+            pw.value!!,
+            name.value!!,
+            nickName.value!!,
+            phoneNumber.value!!,
+            birth.value!!,
+            profileImage.value!!
+        )),
+            object : DisposableCompletableObserver() {
+                override fun onComplete() {
+                    registerSuccessEvent.call()
+                }
+
+                override fun onError(e: Throwable) {
+                    onErrorEvent.value = e
+                }
+
+            })
+    }
+
 }
