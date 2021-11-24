@@ -21,5 +21,22 @@
         android:id="@+id/profile"
         android:name="kr.hs.dgsw.dsb_android.view.fragment.ProfileFragment"
         android:label="ProfileFragment"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile_to_accountListFragment"
+            app:destination="@id/accountListFragment" />
+        <action
+            android:id="@+id/action_profile_to_privacyPolicyFragment"
+            app:destination="@id/privacyPolicyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountListFragment"
+        android:name="kr.hs.dgsw.dsb_android.viewmodel.fragment.AccountListFragment"
+        android:label="fragment_account_list"
+        tools:layout="@layout/fragment_account_list" />
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="kr.hs.dgsw.dsb_android.viewmodel.fragment.PrivacyPolicyFragment"
+        android:label="fragment_privacy_policy"
+        tools:layout="@layout/fragment_privacy_policy" />
 </navigation>
