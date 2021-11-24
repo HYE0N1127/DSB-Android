@@ -3,6 +3,6 @@
     <color name="colorCardBackground">#202020</color>
     <color name="color_light_black">#FFFFFF</color>
     <color name="colorBackground">#FFFFFF</color>
-
+    <color name="colorStrokeAddBtn">@color/white</color>
     <color name="black">#FFFFFFFF</color>
 </resources>

@@ -16,4 +16,5 @@
     <color name="colorCardBackground">@color/white</color>
     <color name="colorBackground">#FFFFFF</color>
     <color name="color_background">#EDEDED</color>
+    <color name="colorStrokeAddBtn">#979797</color>
 </resources>

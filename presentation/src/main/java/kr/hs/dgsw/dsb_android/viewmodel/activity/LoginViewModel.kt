@@ -3,8 +3,6 @@ package kr.hs.dgsw.dsb_android.viewmodel.activity
 import android.view.View
 import androidx.lifecycle.MutableLiveData
 import io.reactivex.observers.DisposableCompletableObserver
-import kr.hs.dgsw.domain.repository.AuthRepository
-import kr.hs.dgsw.domain.request.LoginRequest
 import kr.hs.dgsw.domain.usecase.auth.LoginUseCase
 import kr.hs.dgsw.dsb_android.base.BaseViewModel
 import kr.hs.dgsw.dsb_android.util.SingleLiveEvent

@@ -4,15 +4,14 @@ import io.reactivex.Completable
 import kr.hs.dgsw.domain.base.ParamUseCase
 import kr.hs.dgsw.domain.repository.AuthRepository
 
-class LoginUseCase(private val authRepository: AuthRepository) :
-    ParamUseCase<LoginUseCase.Params, Completable> {
+class IdDoubleValidUseCase(private val authRepository: AuthRepository) :
+    ParamUseCase<IdDoubleValidUseCase.Params, Completable> {
 
     override fun buildUseCaseObservable(params: Params): Completable {
-        return authRepository.login(params.id, params.password)
+        return authRepository.idDoubleValidCheck(params.id)
     }
 
-    data class Params (
+    data class Params(
         val id: String,
-        val password: String
     )
 }

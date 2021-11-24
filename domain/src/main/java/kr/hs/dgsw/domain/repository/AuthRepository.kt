@@ -1,16 +1,25 @@
 package kr.hs.dgsw.domain.repository
 
 import io.reactivex.Completable
-import io.reactivex.Single
-import kr.hs.dgsw.domain.entity.Token
-import kr.hs.dgsw.domain.request.LoginRequest
 
 interface AuthRepository {
 
-    fun register(id: String, pw: String, name: String) : Completable
+    fun register(
+        id: String,
+        pw: String,
+        name: String,
+        nickname: String,
+        phone: String,
+        birth: String,
+        profileImage: String,
+    ): Completable
 
-    fun login(id: String, pw: String) : Completable
+    fun login(id: String, pw: String): Completable
 
-    fun simpleLogin(simplePw : String) : Completable
+    fun simpleRegister(userId: String, easyPassword: String): Completable
+
+    fun simpleLogin(idx: String, simplePassword: String): Completable
+
+    fun idDoubleValidCheck(id: String): Completable
 
 }

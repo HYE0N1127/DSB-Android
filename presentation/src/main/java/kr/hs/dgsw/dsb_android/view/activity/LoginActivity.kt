@@ -13,8 +13,6 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(){
     override val viewModel: LoginViewModel
         get() = getViewModel(clazz = LoginViewModel::class)
 
-
-
     override fun observerViewModel() {
         with(mViewModel) {
             onRegisterClickEvent.observe(this@LoginActivity, {
@@ -23,12 +21,12 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(){
             })
             loginSuccessEvent.observe(this@LoginActivity, {
                 val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                Toast.makeText(this@LoginActivity, "Login Success", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@LoginActivity, "로그인 되었습니다.", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
                 finish()
             })
             inputEmptyEvent.observe(this@LoginActivity, {
-                Toast.makeText(this@LoginActivity, "Check ID or Password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@LoginActivity, "아이디 혹은 패스워드를 확인해주세요", Toast.LENGTH_SHORT).show()
             })
         }
     }
