@@ -1,4 +1,4 @@
-package kr.hs.dgsw.data.network.response
+package kr.hs.dgsw.domain.response
 
 data class Response<T>(
     val status: Int,

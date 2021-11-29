@@ -1,7 +1,7 @@
 package kr.hs.dgsw.data.base
 
 import io.reactivex.functions.Function
-import kr.hs.dgsw.data.network.response.Response
+import kr.hs.dgsw.domain.response.Response
 import org.json.JSONObject
 
 abstract class BaseRemote<SV> {

@@ -2,7 +2,7 @@ package kr.hs.dgsw.data.network.remote
 
 import io.reactivex.Single
 import kr.hs.dgsw.data.base.BaseRemote
-import kr.hs.dgsw.data.network.response.data.LoginData
+import kr.hs.dgsw.domain.response.data.LoginData
 import kr.hs.dgsw.data.network.service.AuthService
 import kr.hs.dgsw.domain.request.auth.*
 

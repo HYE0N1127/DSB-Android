@@ -1,8 +1,8 @@
 package kr.hs.dgsw.data.network.service
 
 import io.reactivex.Single
-import kr.hs.dgsw.data.network.response.Response
-import kr.hs.dgsw.data.network.response.data.LoginData
+import kr.hs.dgsw.domain.response.Response
+import kr.hs.dgsw.domain.response.data.LoginData
 import kr.hs.dgsw.domain.request.auth.*
 import retrofit2.http.Body
 import retrofit2.http.GET
