@@ -1,6 +1,6 @@
-package kr.hs.dgsw.domain.response
+package kr.hs.dgsw.data.base
 
-data class Response<T>(
+data class BaseResponse<T>(
     val status: Int,
     val message: String,
     val data: T
