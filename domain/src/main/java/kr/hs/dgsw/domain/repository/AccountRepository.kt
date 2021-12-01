@@ -10,6 +10,8 @@ interface AccountRepository {
 
     fun getOtherAccount(): Single<List<Account>>
 
+    fun getMyAccountByToken() : Single<List<Account>>
+
     fun getAccountByPhoneNumber(phone: String): Single<List<Account>>
 
     fun getAccountByAccountNumber(accountNum: String): Single<List<Account>>
