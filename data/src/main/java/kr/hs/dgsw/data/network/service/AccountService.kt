@@ -28,5 +28,5 @@ interface AccountService {
     @GET("/account/find/account/{account}")
     fun getAccountByAccountNumber(
         @Path("account") accountNumber : String
-    ) : Single<retrofit2.Response<BaseResponse<LookUpAccountResponse>>>
+    ) : Single<retrofit2.Response<BaseResponse<List<Account>>>>
 }
