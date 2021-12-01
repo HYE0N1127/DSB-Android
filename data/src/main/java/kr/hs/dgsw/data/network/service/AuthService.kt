@@ -1,8 +1,8 @@
 package kr.hs.dgsw.data.network.service
 
 import io.reactivex.Single
-import kr.hs.dgsw.data.network.response.Response
-import kr.hs.dgsw.data.network.response.data.LoginData
+import kr.hs.dgsw.data.base.BaseResponse
+import kr.hs.dgsw.domain.response.auth.LoginData
 import kr.hs.dgsw.domain.request.auth.*
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -14,23 +14,23 @@ interface AuthService {
     @POST("/auth/signin")
     fun login(
         @Body loginRequest: LoginRequest,
-    ): Single<retrofit2.Response<Response<LoginData>>>
+    ): Single<retrofit2.Response<BaseResponse<LoginData>>>
 
     @POST("/auth/signup")
     fun register(
         @Body registerRequest: RegisterRequest,
-    ): Single<retrofit2.Response<Response<Any>>>
+    ): Single<retrofit2.Response<BaseResponse<Any>>>
 
     @POST("/auth/signin/easy")
-    fun simpleLogin(@Body easyLoginRequest: EasyLoginRequest): Single<retrofit2.Response<Response<LoginData>>>
+    fun simpleLogin(@Body easyLoginRequest: EasyLoginRequest): Single<retrofit2.Response<BaseResponse<LoginData>>>
 
     // 간편 로그인 번호 등록하는 API
     @POST("/auth/signup/easy")
-    fun registerSimpleLogin(@Body easySignUpRequest: EasySignUpRequest): Single<retrofit2.Response<Response<Any>>>
+    fun registerSimpleLogin(@Body easySignUpRequest: EasySignUpRequest): Single<retrofit2.Response<BaseResponse<Any>>>
 
     @GET("/auth/signup/check")
     fun idDoubleValidCheck(
         @Query("id") id: String
-    ): Single<retrofit2.Response<Response<Any>>>
+    ): Single<retrofit2.Response<BaseResponse<Any>>>
 
 }

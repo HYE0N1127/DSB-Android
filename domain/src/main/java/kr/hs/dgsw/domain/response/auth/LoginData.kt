@@ -1,4 +1,4 @@
-package kr.hs.dgsw.data.network.response.data
+package kr.hs.dgsw.domain.response.auth
 
 data class LoginData (
     val token: String,
